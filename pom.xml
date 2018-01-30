@@ -76,7 +76,7 @@
                     <!-- MainClass in mainfest make a executable jar -->
                     <archive>
                         <manifest>
-                            <mainClass>com.daysofree.activiti.learn.OnboardingRequest</mainClass>
+                            <mainClass>com.daysofree.activiti.learn.quickstart.OnboardingRequest</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -111,7 +111,7 @@
                                         implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.daysofree.activiti.learn.OnboardingRequest</mainClass>
+                                    <mainClass>com.daysofree.activiti.learn.quickstart.OnboardingRequest</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
