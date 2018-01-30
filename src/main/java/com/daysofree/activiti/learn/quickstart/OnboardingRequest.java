@@ -53,11 +53,13 @@ public class OnboardingRequest {
         // 5. Run Process Instance
         RuntimeService runtimeService = processEngine.getRuntimeService();
         ProcessInstance processInstance = runtimeService
+                // 启动流程
                 .startProcessInstanceByKey("onboarding");
         System.out.println("Onboarding process started with process instance id ["
                 + processInstance.getProcessInstanceId()
                 + "] key [" + processInstance.getProcessDefinitionKey() + "]");
 
+        // 获取任务
         TaskService taskService = processEngine.getTaskService();
         FormService formService = processEngine.getFormService();
         HistoryService historyService = processEngine.getHistoryService();
