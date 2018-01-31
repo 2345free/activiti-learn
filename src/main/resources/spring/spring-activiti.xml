@@ -35,6 +35,17 @@
         <property name="processEngineConfiguration" ref="processEngineConfiguration"/>
     </bean>
 
+    <!--
+        Activiti引擎的七大Service接口
+        Service接口	作用
+        RepositoryService	流程仓库Service，用于管理流程仓库，例如部署、删除、读取流程资源
+        IdentifyService	身份Service，用于管理和查询用户、组之间的关系
+        RuntimeService	运行时Service，可以也拿过来处理所有正在运行状态的流程实例、任务等
+        TaskService	任务Service，用于管理和查询任务，例如签收、办理、指派等
+        FormService	表单Service，用于读取流程、任务相关的表单数据
+        HistoryService	历史Service，用于查询所有历史数据，例如流程实例、任务、活动、变量、附件
+        ManagementService	引擎管理Service，和具体业务无关，主要可以查询引擎配置、数据库、作业等
+    -->
     <!-- activiti主要的Service -->
     <bean id="repositoryService" factory-bean="processEngine" factory-method="getRepositoryService"/>
     <bean id="runtimeService" factory-bean="processEngine" factory-method="getRuntimeService"/>
