@@ -66,6 +66,7 @@
 		<property name="jdbcPingEnabled" value="true" />
 		<!-- 连接无用检查并连接间隔，单位毫秒 -->
 		<property name="jdbcPingConnectionNotUsedFor" value="3600000" />
+        <property name="deploymentMode" value="single-resource"/>
 	</bean>
 
 	<!-- activiti配置 -->
